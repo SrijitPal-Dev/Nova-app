@@ -75,3 +75,56 @@ body {
   background: var(--color-border);
   border-radius: 0;
 }
+
+@keyframes drift-one {
+  0%, 100% {
+    transform: translate(0%, 0%) scale(1);
+    border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+  }
+  33% {
+    transform: translate(8%, -6%) scale(1.08);
+    border-radius: 60% 40% 35% 65% / 55% 65% 35% 45%;
+  }
+  66% {
+    transform: translate(-5%, 5%) scale(0.95);
+    border-radius: 35% 65% 55% 45% / 40% 45% 55% 60%;
+  }
+}
+
+@keyframes drift-two {
+  0%, 100% {
+    transform: translate(0%, 0%) scale(1);
+    border-radius: 55% 45% 40% 60% / 50% 55% 45% 50%;
+  }
+  50% {
+    transform: translate(-10%, 8%) scale(1.12);
+    border-radius: 40% 60% 55% 45% / 60% 40% 60% 40%;
+  }
+}
+
+@keyframes drift-three {
+  0%, 100% {
+    transform: translate(0%, 0%) scale(1);
+    border-radius: 50% 50% 45% 55% / 55% 45% 55% 45%;
+  }
+  40% {
+    transform: translate(6%, 10%) scale(0.9);
+    border-radius: 60% 40% 50% 50% / 45% 60% 40% 55%;
+  }
+  75% {
+    transform: translate(-8%, -4%) scale(1.05);
+    border-radius: 45% 55% 60% 40% / 50% 55% 45% 50%;
+  }
+}
+
+.blob {
+  position: absolute;
+  filter: blur(60px);
+  will-change: transform, border-radius;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none !important;
+  }
+}
