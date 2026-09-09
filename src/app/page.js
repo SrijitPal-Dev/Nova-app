@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import FluidBackground from "@/components/FluidBackground";
+import FluidBackground from "./components/FluidBackground";
 
 export default function Home() {
   const router = useRouter();
